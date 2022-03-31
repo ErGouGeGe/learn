@@ -14,6 +14,35 @@
           "children": []
         },
         {
+          "title": "Browser",
+          "path": "/browser",
+          "meta": {},
+          "children": [
+            {
+              "path": "/browser/macro-browser",
+              "title": "浏览器 \b",
+              "meta": {}
+            }
+          ]
+        },
+        {
+          "title": "Go",
+          "path": "/go",
+          "meta": {},
+          "children": [
+            {
+              "path": "/go",
+              "title": "Basic grammar",
+              "meta": {}
+            },
+            {
+              "path": "/go/container",
+              "title": "Container",
+              "meta": {}
+            }
+          ]
+        },
+        {
           "title": "Leetcode",
           "path": "/leetcode",
           "meta": {},
@@ -60,18 +89,6 @@
             {
               "path": "/react/element",
               "title": "ReactElement",
-              "meta": {}
-            }
-          ]
-        },
-        {
-          "title": "浏览器方面",
-          "path": "/浏览器方面",
-          "meta": {},
-          "children": [
-            {
-              "path": "/浏览器方面/宏观看浏览器",
-              "title": "浏览器\b",
               "meta": {}
             }
           ]
