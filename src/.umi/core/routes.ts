@@ -57,7 +57,7 @@ export function getRoutes() {
         "exact": true,
         "meta": {
           "filePath": "src/GO/container.md",
-          "updatedTime": 1647588070676,
+          "updatedTime": 1648706791000,
           "slugs": [
             {
               "depth": 3,
@@ -81,13 +81,18 @@ export function getRoutes() {
             },
             {
               "depth": 5,
-              "value": "slice的扩展",
-              "heading": "slice的扩展"
+              "value": "slice 的扩展",
+              "heading": "slice-的扩展"
             },
             {
               "depth": 5,
-              "value": "slice的实现",
-              "heading": "slice的实现"
+              "value": "slice 的实现",
+              "heading": "slice-的实现"
+            },
+            {
+              "depth": 5,
+              "value": "向 slice 添加元素",
+              "heading": "向-slice-添加元素"
             }
           ],
           "title": "Container",
@@ -104,7 +109,7 @@ export function getRoutes() {
         "exact": true,
         "meta": {
           "filePath": "src/GO/index.md",
-          "updatedTime": 1647506098495,
+          "updatedTime": 1648706791000,
           "slugs": [
             {
               "depth": 3,
@@ -118,8 +123,8 @@ export function getRoutes() {
             },
             {
               "depth": 5,
-              "value": "使用var关键字",
-              "heading": "使用var关键字"
+              "value": "使用 var 关键字",
+              "heading": "使用-var-关键字"
             },
             {
               "depth": 4,
@@ -128,8 +133,8 @@ export function getRoutes() {
             },
             {
               "depth": 5,
-              "value": "使用const关键字",
-              "heading": "使用const关键字"
+              "value": "使用 const 关键字",
+              "heading": "使用-const-关键字"
             },
             {
               "depth": 4,
@@ -233,6 +238,28 @@ export function getRoutes() {
           }
         },
         "title": "React API"
+      },
+      {
+        "path": "/type-script/ts",
+        "component": require('/Users/wangshun/Desktop/conclusion/src/TypeScript/ts.md').default,
+        "exact": true,
+        "meta": {
+          "filePath": "src/TypeScript/ts.md",
+          "updatedTime": 1653272023754,
+          "slugs": [
+            {
+              "depth": 3,
+              "value": "TypeScript",
+              "heading": "typescript"
+            }
+          ],
+          "title": "TypeScript",
+          "group": {
+            "path": "/type-script",
+            "title": "Type-script"
+          }
+        },
+        "title": "TypeScript"
       },
       {
         "path": "/babel",
@@ -523,6 +550,12 @@ export function getRoutes() {
           "title": "Hello XTT!"
         },
         "title": "Hello XTT!"
+      },
+      {
+        "path": "/type-script",
+        "meta": {},
+        "exact": true,
+        "redirect": "/type-script/ts"
       },
       {
         "path": "/browser",
