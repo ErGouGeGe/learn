@@ -1,6 +1,6 @@
 // @ts-nocheck
 import React from 'react';
-import { ApplyPluginsType } from '/Users/wangshun/Desktop/conclusion/node_modules/@umijs/runtime';
+import { ApplyPluginsType } from '/Users/wangshun/Desktop/learn/node_modules/@umijs/runtime';
 import * as umiExports from './umiExports';
 import { plugin } from './plugin';
 
@@ -9,15 +9,21 @@ export function getRoutes() {
   {
     "path": "/~demos/:uuid",
     "layout": false,
-    "wrappers": [require('/Users/wangshun/Desktop/conclusion/node_modules/@umijs/preset-dumi/lib/theme/layout').default],
-    "component": (props) => {
-        const { default: getDemoRenderArgs } = require('/Users/wangshun/Desktop/conclusion/node_modules/@umijs/preset-dumi/lib/plugins/features/demo/getDemoRenderArgs');
-        const { default: Previewer } = require('dumi-theme-default/src/builtins/Previewer.tsx');
-        const { default: demos } = require('@@/dumi/demos');
-        const { usePrefersColor } = require('dumi/theme');
+    "wrappers": [require('../dumi/layout').default],
+    "component": ((props) => {
+        const React = require('react');
+        const { default: getDemoRenderArgs } = require('/Users/wangshun/Desktop/learn/node_modules/@umijs/preset-dumi/lib/plugins/features/demo/getDemoRenderArgs');
+        const { default: Previewer } = require('dumi-theme-default/es/builtins/Previewer.js');
+        const { usePrefersColor, context } = require('dumi/theme');
 
         
-      const renderArgs = getDemoRenderArgs(props, demos);
+      const { demos } = React.useContext(context);
+      const [renderArgs, setRenderArgs] = React.useState([]);
+
+      // update render args when props changed
+      React.useLayoutEffect(() => {
+        setRenderArgs(getDemoRenderArgs(props, demos));
+      }, [props.match.params.uuid, props.location.query.wrapper, props.location.query.capture]);
 
       // for listen prefers-color-schema media change in demo single route
       usePrefersColor();
@@ -39,7 +45,7 @@ export function getRoutes() {
           return `Demo ${props.match.params.uuid} not found :(`;
       }
     
-        }
+        })
   },
   {
     "path": "/_demos/:uuid",
@@ -49,11 +55,59 @@ export function getRoutes() {
     "__dumiRoot": true,
     "layout": false,
     "path": "/",
-    "wrappers": [require('/Users/wangshun/Desktop/conclusion/node_modules/@umijs/preset-dumi/lib/theme/layout').default, require('/Users/wangshun/Desktop/conclusion/node_modules/dumi-theme-default/src/layout.tsx').default],
+    "wrappers": [require('../dumi/layout').default, require('/Users/wangshun/Desktop/learn/node_modules/dumi-theme-default/es/layout.js').default],
     "routes": [
       {
+        "path": "/77/jwt",
+        "component": require('/Users/wangshun/Desktop/learn/src/77/JWT.md').default,
+        "exact": true,
+        "meta": {
+          "filePath": "src/77/JWT.md",
+          "updatedTime": 1704347276139,
+          "slugs": [],
+          "group": {
+            "path": "/77",
+            "title": "77"
+          },
+          "title": "JWT"
+        },
+        "title": "JWT - XTT"
+      },
+      {
+        "path": "/77/autowire",
+        "component": require('/Users/wangshun/Desktop/learn/src/77/autowire.md').default,
+        "exact": true,
+        "meta": {
+          "filePath": "src/77/autowire.md",
+          "updatedTime": 1701049091021,
+          "slugs": [],
+          "group": {
+            "path": "/77",
+            "title": "77"
+          },
+          "title": "Autowire"
+        },
+        "title": "Autowire - XTT"
+      },
+      {
+        "path": "/77/合并分支",
+        "component": require('/Users/wangshun/Desktop/learn/src/77/合并分支.md').default,
+        "exact": true,
+        "meta": {
+          "filePath": "src/77/合并分支.md",
+          "updatedTime": 1704339674865,
+          "slugs": [],
+          "group": {
+            "path": "/77",
+            "title": "77"
+          },
+          "title": "合并分支"
+        },
+        "title": "合并分支 - XTT"
+      },
+      {
         "path": "/go/container",
-        "component": require('/Users/wangshun/Desktop/conclusion/src/GO/container.md').default,
+        "component": require('/Users/wangshun/Desktop/learn/src/GO/container.md').default,
         "exact": true,
         "meta": {
           "filePath": "src/GO/container.md",
@@ -98,14 +152,14 @@ export function getRoutes() {
           "title": "Container",
           "group": {
             "path": "/go",
-            "title": "Go"
+            "title": "GO"
           }
         },
-        "title": "Container"
+        "title": "Container - XTT"
       },
       {
         "path": "/go",
-        "component": require('/Users/wangshun/Desktop/conclusion/src/GO/index.md').default,
+        "component": require('/Users/wangshun/Desktop/learn/src/GO/index.md').default,
         "exact": true,
         "meta": {
           "filePath": "src/GO/index.md",
@@ -160,14 +214,91 @@ export function getRoutes() {
           "title": "Basic grammar",
           "group": {
             "path": "/go",
-            "title": "Go"
+            "title": "GO"
           }
         },
-        "title": "Basic grammar"
+        "title": "Basic grammar - XTT"
+      },
+      {
+        "path": "/generator",
+        "component": require('/Users/wangshun/Desktop/learn/src/Generator/index.md').default,
+        "exact": true,
+        "meta": {
+          "filePath": "src/Generator/index.md",
+          "updatedTime": 1690441749000,
+          "slugs": [
+            {
+              "depth": 3,
+              "value": "分享根本不常用知识之 Generator",
+              "heading": "分享根本不常用知识之-generator"
+            },
+            {
+              "depth": 2,
+              "value": "Generator 对象",
+              "heading": "generator-对象"
+            },
+            {
+              "depth": 3,
+              "value": "一、generator Object",
+              "heading": "一generator-object"
+            },
+            {
+              "depth": 3,
+              "value": "二、Generator",
+              "heading": "二generator"
+            },
+            {
+              "depth": 3,
+              "value": "三、GeneratorFunction",
+              "heading": "三generatorfunction"
+            },
+            {
+              "depth": 3,
+              "value": "二、Generator、GeneratorFunction 及其 prototype 的关系",
+              "heading": "二generatorgeneratorfunction-及其-prototype-的关系"
+            },
+            {
+              "depth": 2,
+              "value": "Generator 深入探索",
+              "heading": "generator-深入探索"
+            },
+            {
+              "depth": 3,
+              "value": "一、问题",
+              "heading": "一问题"
+            },
+            {
+              "depth": 3,
+              "value": "二、Generator 的状态",
+              "heading": "二generator-的状态"
+            },
+            {
+              "depth": 3,
+              "value": "三、多个 Generator 是如何协作的",
+              "heading": "三多个-generator-是如何协作的"
+            },
+            {
+              "depth": 3,
+              "value": "四、mark、wrap、Context",
+              "heading": "四markwrapcontext"
+            },
+            {
+              "depth": 3,
+              "value": "五、yield* genFn()",
+              "heading": "五yield-genfn"
+            }
+          ],
+          "title": "分享根本不常用知识之 Generator",
+          "group": {
+            "path": "/generator",
+            "title": "Generator"
+          }
+        },
+        "title": "分享根本不常用知识之 Generator - XTT"
       },
       {
         "path": "/react/element",
-        "component": require('/Users/wangshun/Desktop/conclusion/src/React/element.md').default,
+        "component": require('/Users/wangshun/Desktop/learn/src/React/element.md').default,
         "exact": true,
         "meta": {
           "filePath": "src/React/element.md",
@@ -190,11 +321,11 @@ export function getRoutes() {
             "title": "React"
           }
         },
-        "title": "ReactElement"
+        "title": "ReactElement - XTT"
       },
       {
         "path": "/react",
-        "component": require('/Users/wangshun/Desktop/conclusion/src/React/index.md').default,
+        "component": require('/Users/wangshun/Desktop/learn/src/React/index.md').default,
         "exact": true,
         "meta": {
           "filePath": "src/React/index.md",
@@ -237,33 +368,43 @@ export function getRoutes() {
             "title": "React"
           }
         },
-        "title": "React API"
+        "title": "React API - XTT"
       },
       {
         "path": "/type-script/ts",
-        "component": require('/Users/wangshun/Desktop/conclusion/src/TypeScript/ts.md').default,
+        "component": require('/Users/wangshun/Desktop/learn/src/TypeScript/ts.md').default,
         "exact": true,
         "meta": {
           "filePath": "src/TypeScript/ts.md",
-          "updatedTime": 1653272023754,
-          "slugs": [
-            {
-              "depth": 3,
-              "value": "TypeScript",
-              "heading": "typescript"
-            }
-          ],
-          "title": "TypeScript",
+          "updatedTime": 1657852061000,
+          "slugs": [],
           "group": {
             "path": "/type-script",
-            "title": "Type-script"
-          }
+            "title": "TypeScript"
+          },
+          "title": "Ts"
         },
-        "title": "TypeScript"
+        "title": "Ts - XTT"
+      },
+      {
+        "path": "/type-script/work-study",
+        "component": require('/Users/wangshun/Desktop/learn/src/TypeScript/workStudy.md').default,
+        "exact": true,
+        "meta": {
+          "filePath": "src/TypeScript/workStudy.md",
+          "updatedTime": 1700547603268,
+          "slugs": [],
+          "group": {
+            "path": "/type-script",
+            "title": "TypeScript"
+          },
+          "title": "WorkStudy"
+        },
+        "title": "WorkStudy - XTT"
       },
       {
         "path": "/babel",
-        "component": require('/Users/wangshun/Desktop/conclusion/src/babel/index.md').default,
+        "component": require('/Users/wangshun/Desktop/learn/src/babel/index.md').default,
         "exact": true,
         "meta": {
           "filePath": "src/babel/index.md",
@@ -296,11 +437,11 @@ export function getRoutes() {
             "title": "Babel"
           }
         },
-        "title": "Babel"
+        "title": "Babel - XTT"
       },
       {
         "path": "/browser/macro-browser",
-        "component": require('/Users/wangshun/Desktop/conclusion/src/browser/macroBrowser.md').default,
+        "component": require('/Users/wangshun/Desktop/learn/src/browser/macroBrowser.md').default,
         "exact": true,
         "meta": {
           "filePath": "src/browser/macroBrowser.md",
@@ -309,7 +450,7 @@ export function getRoutes() {
             {
               "depth": 3,
               "value": "浏览器 \b",
-              "heading": "浏览器-\b"
+              "heading": "浏览器-"
             },
             {
               "depth": 4,
@@ -324,7 +465,7 @@ export function getRoutes() {
             {
               "depth": 5,
               "value": "你怎么理解 HTTP 和 TCP 的关系？",
-              "heading": "你怎么理解-http-和-tcp-的关系？"
+              "heading": "你怎么理解-http-和-tcp-的关系"
             },
             {
               "depth": 4,
@@ -334,7 +475,7 @@ export function getRoutes() {
             {
               "depth": 4,
               "value": "URL 输入到页面展示经历了什么？",
-              "heading": "url-输入到页面展示经历了什么？"
+              "heading": "url-输入到页面展示经历了什么"
             },
             {
               "depth": 5,
@@ -368,11 +509,11 @@ export function getRoutes() {
             "title": "Browser"
           }
         },
-        "title": "浏览器 \b"
+        "title": "浏览器 \b - XTT"
       },
       {
         "path": "/leetcode",
-        "component": require('/Users/wangshun/Desktop/conclusion/src/leetcode/index.md').default,
+        "component": require('/Users/wangshun/Desktop/learn/src/leetcode/index.md').default,
         "exact": true,
         "meta": {
           "filePath": "src/leetcode/index.md",
@@ -415,11 +556,11 @@ export function getRoutes() {
             "title": "Leetcode"
           }
         },
-        "title": "Array"
+        "title": "Array - XTT"
       },
       {
         "path": "/leetcode/link",
-        "component": require('/Users/wangshun/Desktop/conclusion/src/leetcode/link.md').default,
+        "component": require('/Users/wangshun/Desktop/learn/src/leetcode/link.md').default,
         "exact": true,
         "meta": {
           "filePath": "src/leetcode/link.md",
@@ -452,11 +593,11 @@ export function getRoutes() {
             "title": "Leetcode"
           }
         },
-        "title": "LinkList"
+        "title": "LinkList - XTT"
       },
       {
         "path": "/leetcode/stack",
-        "component": require('/Users/wangshun/Desktop/conclusion/src/leetcode/stack.md').default,
+        "component": require('/Users/wangshun/Desktop/learn/src/leetcode/stack.md').default,
         "exact": true,
         "meta": {
           "filePath": "src/leetcode/stack.md",
@@ -484,11 +625,11 @@ export function getRoutes() {
             "title": "Leetcode"
           }
         },
-        "title": "Stack"
+        "title": "Stack - XTT"
       },
       {
         "path": "/promise/impl-promise",
-        "component": require('/Users/wangshun/Desktop/conclusion/src/promise/implPromise.md').default,
+        "component": require('/Users/wangshun/Desktop/learn/src/promise/implPromise.md').default,
         "exact": true,
         "meta": {
           "filePath": "src/promise/implPromise.md",
@@ -531,11 +672,11 @@ export function getRoutes() {
             "title": "Promise"
           }
         },
-        "title": "根据 Promise/A+ 规范实现 Promise"
+        "title": "根据 Promise/A+ 规范实现 Promise - XTT"
       },
       {
         "path": "/",
-        "component": require('/Users/wangshun/Desktop/conclusion/docs/index.md').default,
+        "component": require('/Users/wangshun/Desktop/learn/docs/index.md').default,
         "exact": true,
         "meta": {
           "filePath": "docs/index.md",
@@ -549,7 +690,13 @@ export function getRoutes() {
           ],
           "title": "Hello XTT!"
         },
-        "title": "Hello XTT!"
+        "title": "Hello XTT! - XTT"
+      },
+      {
+        "path": "/77",
+        "meta": {},
+        "exact": true,
+        "redirect": "/77/autowire"
       },
       {
         "path": "/type-script",
