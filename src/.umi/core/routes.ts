@@ -58,12 +58,64 @@ export function getRoutes() {
     "wrappers": [require('../dumi/layout').default, require('/Users/wangshun/Desktop/learn/node_modules/dumi-theme-default/es/layout.js').default],
     "routes": [
       {
+        "path": "/77/2022.4",
+        "component": require('/Users/wangshun/Desktop/learn/src/77/2022.4.18分享.md').default,
+        "exact": true,
+        "meta": {
+          "filePath": "src/77/2022.4.18分享.md",
+          "updatedTime": 1710492088106,
+          "slugs": [
+            {
+              "depth": 2,
+              "value": "2022.4.18分享",
+              "heading": "2022418分享"
+            },
+            {
+              "depth": 3,
+              "value": "1、个人的一些定位代码的思路：用来处理bug、看某块的代码实现",
+              "heading": "1个人的一些定位代码的思路用来处理bug看某块的代码实现"
+            },
+            {
+              "depth": 3,
+              "value": "2、业务",
+              "heading": "2业务"
+            },
+            {
+              "depth": 3,
+              "value": "3、ts的一些基础知识",
+              "heading": "3ts的一些基础知识"
+            },
+            {
+              "depth": 3,
+              "value": "type",
+              "heading": "type"
+            },
+            {
+              "depth": 4,
+              "value": "interface",
+              "heading": "interface"
+            },
+            {
+              "depth": 4,
+              "value": "class",
+              "heading": "class"
+            }
+          ],
+          "title": "2022.4.18分享",
+          "group": {
+            "path": "/77",
+            "title": "77"
+          }
+        },
+        "title": "2022.4.18分享 - XTT"
+      },
+      {
         "path": "/77/jwt",
         "component": require('/Users/wangshun/Desktop/learn/src/77/JWT.md').default,
         "exact": true,
         "meta": {
           "filePath": "src/77/JWT.md",
-          "updatedTime": 1704347276139,
+          "updatedTime": 1708927800000,
           "slugs": [],
           "group": {
             "path": "/77",
@@ -79,7 +131,7 @@ export function getRoutes() {
         "exact": true,
         "meta": {
           "filePath": "src/77/autowire.md",
-          "updatedTime": 1701049091021,
+          "updatedTime": 1708927800000,
           "slugs": [],
           "group": {
             "path": "/77",
@@ -90,12 +142,462 @@ export function getRoutes() {
         "title": "Autowire - XTT"
       },
       {
+        "path": "/77/channel",
+        "component": require('/Users/wangshun/Desktop/learn/src/77/channel.md').default,
+        "exact": true,
+        "meta": {
+          "filePath": "src/77/channel.md",
+          "updatedTime": 1710492187186,
+          "slugs": [
+            {
+              "depth": 3,
+              "value": "协程",
+              "heading": "协程"
+            },
+            {
+              "depth": 4,
+              "value": "启动一个go协程",
+              "heading": "启动一个go协程"
+            },
+            {
+              "depth": 4,
+              "value": "启动多个go协程",
+              "heading": "启动多个go协程"
+            },
+            {
+              "depth": 3,
+              "value": "通道",
+              "heading": "通道"
+            },
+            {
+              "depth": 4,
+              "value": "通道的声明",
+              "heading": "通道的声明"
+            },
+            {
+              "depth": 4,
+              "value": "通道的初始化",
+              "heading": "通道的初始化"
+            },
+            {
+              "depth": 4,
+              "value": "使用通道发送和接收数据",
+              "heading": "使用通道发送和接收数据"
+            },
+            {
+              "depth": 4,
+              "value": "通道的关闭",
+              "heading": "通道的关闭"
+            },
+            {
+              "depth": 4,
+              "value": "通道的容量与长度",
+              "heading": "通道的容量与长度"
+            },
+            {
+              "depth": 4,
+              "value": "缓冲通道与无缓冲通道",
+              "heading": "缓冲通道与无缓冲通道"
+            },
+            {
+              "depth": 4,
+              "value": "WaitGroup",
+              "heading": "waitgroup"
+            },
+            {
+              "depth": 3,
+              "value": "企企项目中的应用",
+              "heading": "企企项目中的应用"
+            },
+            {
+              "depth": 3,
+              "value": "更多资料",
+              "heading": "更多资料"
+            }
+          ],
+          "title": "协程",
+          "group": {
+            "path": "/77",
+            "title": "77"
+          }
+        },
+        "title": "协程 - XTT"
+      },
+      {
+        "path": "/77/debug分享",
+        "component": require('/Users/wangshun/Desktop/learn/src/77/debug分享.md').default,
+        "exact": true,
+        "meta": {
+          "filePath": "src/77/debug分享.md",
+          "updatedTime": 1709318224380,
+          "slugs": [
+            {
+              "depth": 1,
+              "value": "debug",
+              "heading": "debug"
+            },
+            {
+              "depth": 2,
+              "value": "debug 的原理",
+              "heading": "debug-的原理"
+            },
+            {
+              "depth": 3,
+              "value": "编译原理",
+              "heading": "编译原理"
+            },
+            {
+              "depth": 3,
+              "value": "debugger原理",
+              "heading": "debugger原理"
+            },
+            {
+              "depth": 3,
+              "value": "debugger adaptor protocol",
+              "heading": "debugger-adaptor-protocol"
+            },
+            {
+              "depth": 2,
+              "value": "debug 的技巧案例",
+              "heading": "debug-的技巧案例"
+            },
+            {
+              "depth": 3,
+              "value": "go-debug技巧分享",
+              "heading": "go-debug技巧分享"
+            },
+            {
+              "depth": 3,
+              "value": "前端debug技巧",
+              "heading": "前端debug技巧"
+            },
+            {
+              "depth": 4,
+              "value": "参考文档",
+              "heading": "参考文档"
+            }
+          ],
+          "title": "debug",
+          "group": {
+            "path": "/77",
+            "title": "77"
+          }
+        },
+        "title": "debug - XTT"
+      },
+      {
+        "path": "/77/git",
+        "component": require('/Users/wangshun/Desktop/learn/src/77/git.md').default,
+        "exact": true,
+        "meta": {
+          "filePath": "src/77/git.md",
+          "updatedTime": 1710492326448,
+          "slugs": [
+            {
+              "depth": 3,
+              "value": "git 是什么?",
+              "heading": "git-是什么"
+            },
+            {
+              "depth": 4,
+              "value": "基本操作",
+              "heading": "基本操作"
+            },
+            {
+              "depth": 4,
+              "value": "commit 规范",
+              "heading": "commit-规范"
+            },
+            {
+              "depth": 4,
+              "value": "commit 规范",
+              "heading": "commit-规范-1"
+            }
+          ],
+          "title": "git 是什么?",
+          "group": {
+            "path": "/77",
+            "title": "77"
+          }
+        },
+        "title": "git 是什么? - XTT"
+      },
+      {
+        "path": "/77/go常规泛型",
+        "component": require('/Users/wangshun/Desktop/learn/src/77/go常规泛型.md').default,
+        "exact": true,
+        "meta": {
+          "filePath": "src/77/go常规泛型.md",
+          "updatedTime": 1710493083359,
+          "slugs": [],
+          "group": {
+            "path": "/77",
+            "title": "77"
+          },
+          "title": "Go常规泛型"
+        },
+        "title": "Go常规泛型 - XTT"
+      },
+      {
+        "path": "/77/graphiql",
+        "component": require('/Users/wangshun/Desktop/learn/src/77/graphiql.md').default,
+        "exact": true,
+        "meta": {
+          "filePath": "src/77/graphiql.md",
+          "updatedTime": 1709318822337,
+          "slugs": [
+            {
+              "depth": 2,
+              "value": "graphiql 缓存跟踪",
+              "heading": "graphiql-缓存跟踪"
+            },
+            {
+              "depth": 3,
+              "value": "解决问题",
+              "heading": "解决问题"
+            },
+            {
+              "depth": 3,
+              "value": "只能跟踪一下",
+              "heading": "只能跟踪一下"
+            },
+            {
+              "depth": 3,
+              "value": "问题",
+              "heading": "问题"
+            },
+            {
+              "depth": 3,
+              "value": "再次尝试解决问题",
+              "heading": "再次尝试解决问题"
+            },
+            {
+              "depth": 3,
+              "value": "分析问题",
+              "heading": "分析问题"
+            },
+            {
+              "depth": 3,
+              "value": "解决问题",
+              "heading": "解决问题-1"
+            },
+            {
+              "depth": 3,
+              "value": "总结tip",
+              "heading": "总结tip"
+            }
+          ],
+          "title": "graphiql 缓存跟踪",
+          "group": {
+            "path": "/77",
+            "title": "77"
+          }
+        },
+        "title": "graphiql 缓存跟踪 - XTT"
+      },
+      {
+        "path": "/77/yaml",
+        "component": require('/Users/wangshun/Desktop/learn/src/77/yaml.md').default,
+        "exact": true,
+        "meta": {
+          "filePath": "src/77/yaml.md",
+          "updatedTime": 1709318838206,
+          "slugs": [
+            {
+              "depth": 2,
+              "value": "插件分享",
+              "heading": "插件分享"
+            },
+            {
+              "depth": 2,
+              "value": "逗号表达式",
+              "heading": "逗号表达式"
+            },
+            {
+              "depth": 2,
+              "value": "yaml 是什么",
+              "heading": "yaml-是什么"
+            },
+            {
+              "depth": 3,
+              "value": "基本语法",
+              "heading": "基本语法"
+            },
+            {
+              "depth": 3,
+              "value": "类型",
+              "heading": "类型"
+            }
+          ],
+          "title": "插件分享",
+          "group": {
+            "path": "/77",
+            "title": "77"
+          }
+        },
+        "title": "插件分享 - XTT"
+      },
+      {
+        "path": "/77/从搜索谈到自行车维修",
+        "component": require('/Users/wangshun/Desktop/learn/src/77/从搜索谈到自行车维修.md').default,
+        "exact": true,
+        "meta": {
+          "filePath": "src/77/从搜索谈到自行车维修.md",
+          "updatedTime": 1709318669505,
+          "slugs": [
+            {
+              "depth": 1,
+              "value": "从搜索谈到自行车维修",
+              "heading": "从搜索谈到自行车维修"
+            },
+            {
+              "depth": 2,
+              "value": "谷歌搜索",
+              "heading": "谷歌搜索"
+            },
+            {
+              "depth": 2,
+              "value": "百度搜索",
+              "heading": "百度搜索"
+            },
+            {
+              "depth": 2,
+              "value": "其他",
+              "heading": "其他"
+            },
+            {
+              "depth": 2,
+              "value": "程序员搜索",
+              "heading": "程序员搜索"
+            },
+            {
+              "depth": 2,
+              "value": "正确的搜索步骤",
+              "heading": "正确的搜索步骤"
+            },
+            {
+              "depth": 2,
+              "value": "或者我们直接问 chatgpt",
+              "heading": "或者我们直接问-chatgpt"
+            },
+            {
+              "depth": 2,
+              "value": "搜搜内容",
+              "heading": "搜搜内容"
+            }
+          ],
+          "title": "从搜索谈到自行车维修",
+          "group": {
+            "path": "/77",
+            "title": "77"
+          }
+        },
+        "title": "从搜索谈到自行车维修 - XTT"
+      },
+      {
+        "path": "/77/你可能不知道的_sourcemap",
+        "component": require('/Users/wangshun/Desktop/learn/src/77/你可能不知道的_sourcemap.md').default,
+        "exact": true,
+        "meta": {
+          "filePath": "src/77/你可能不知道的_sourcemap.md",
+          "updatedTime": 1709318783936,
+          "slugs": [
+            {
+              "depth": 1,
+              "value": "名人名言",
+              "heading": "名人名言"
+            },
+            {
+              "depth": 3,
+              "value": "考虑问题的一般步骤",
+              "heading": "考虑问题的一般步骤"
+            },
+            {
+              "depth": 2,
+              "value": "介绍",
+              "heading": "介绍"
+            },
+            {
+              "depth": 3,
+              "value": "👽 简单说",
+              "heading": "-简单说"
+            },
+            {
+              "depth": 3,
+              "value": "👀 看一下",
+              "heading": "-看一下"
+            },
+            {
+              "depth": 2,
+              "value": "❓怎么启用",
+              "heading": "怎么启用"
+            },
+            {
+              "depth": 2,
+              "value": "示例",
+              "heading": "示例"
+            },
+            {
+              "depth": 2,
+              "value": "❓如何生成",
+              "heading": "如何生成"
+            },
+            {
+              "depth": 2,
+              "value": "🔧 自己试验一下",
+              "heading": "-自己试验一下"
+            },
+            {
+              "depth": 4,
+              "value": "其他",
+              "heading": "其他"
+            },
+            {
+              "depth": 4,
+              "value": "webpack 相关",
+              "heading": "webpack-相关"
+            },
+            {
+              "depth": 2,
+              "value": "soucemap细节",
+              "heading": "soucemap细节"
+            },
+            {
+              "depth": 2,
+              "value": "稍微总结一下",
+              "heading": "稍微总结一下"
+            },
+            {
+              "depth": 3,
+              "value": "🤔算法&思想",
+              "heading": "算法思想"
+            },
+            {
+              "depth": 3,
+              "value": "⁉️为什么这么处理?",
+              "heading": "️为什么这么处理"
+            },
+            {
+              "depth": 3,
+              "value": "参考地址",
+              "heading": "参考地址"
+            }
+          ],
+          "title": "名人名言",
+          "group": {
+            "path": "/77",
+            "title": "77"
+          }
+        },
+        "title": "名人名言 - XTT"
+      },
+      {
         "path": "/77/合并分支",
         "component": require('/Users/wangshun/Desktop/learn/src/77/合并分支.md').default,
         "exact": true,
         "meta": {
           "filePath": "src/77/合并分支.md",
-          "updatedTime": 1704339674865,
+          "updatedTime": 1708927800000,
           "slugs": [],
           "group": {
             "path": "/77",
@@ -104,6 +606,154 @@ export function getRoutes() {
           "title": "合并分支"
         },
         "title": "合并分支 - XTT"
+      },
+      {
+        "path": "/77/奇怪的_fiber",
+        "component": require('/Users/wangshun/Desktop/learn/src/77/奇怪的_fiber.md').default,
+        "exact": true,
+        "meta": {
+          "filePath": "src/77/奇怪的_fiber.md",
+          "updatedTime": 1709318795183,
+          "slugs": [
+            {
+              "depth": 1,
+              "value": "奇怪的 fiber",
+              "heading": "奇怪的-fiber"
+            },
+            {
+              "depth": 2,
+              "value": "名人名言",
+              "heading": "名人名言"
+            },
+            {
+              "depth": 2,
+              "value": "起因",
+              "heading": "起因"
+            },
+            {
+              "depth": 2,
+              "value": "各种彻底搞懂",
+              "heading": "各种彻底搞懂"
+            },
+            {
+              "depth": 2,
+              "value": "两个🌰",
+              "heading": "两个"
+            },
+            {
+              "depth": 2,
+              "value": "说在前边",
+              "heading": "说在前边"
+            },
+            {
+              "depth": 2,
+              "value": "一、心智模型",
+              "heading": "一心智模型"
+            },
+            {
+              "depth": 3,
+              "value": "代数效应",
+              "heading": "代数效应"
+            },
+            {
+              "depth": 2,
+              "value": "二、怎么实现",
+              "heading": "二怎么实现"
+            },
+            {
+              "depth": 2,
+              "value": "回到 react",
+              "heading": "回到-react"
+            },
+            {
+              "depth": 3,
+              "value": "react 做了什么?",
+              "heading": "react-做了什么"
+            },
+            {
+              "depth": 4,
+              "value": "号外",
+              "heading": "号外"
+            },
+            {
+              "depth": 3,
+              "value": "fiber 是什么?",
+              "heading": "fiber-是什么"
+            },
+            {
+              "depth": 3,
+              "value": "针对 fiber 的疑问",
+              "heading": "针对-fiber-的疑问"
+            },
+            {
+              "depth": 2,
+              "value": "fiber 的结构",
+              "heading": "fiber-的结构"
+            },
+            {
+              "depth": 4,
+              "value": "队列:",
+              "heading": "队列"
+            },
+            {
+              "depth": 4,
+              "value": "节点:",
+              "heading": "节点"
+            },
+            {
+              "depth": 2,
+              "value": "1. 依托队列, fiber 怎么实现的可中断?",
+              "heading": "1-依托队列-fiber-怎么实现的可中断"
+            },
+            {
+              "depth": 2,
+              "value": "打断了怎么恢复, 保证正确性?",
+              "heading": "打断了怎么恢复-保证正确性"
+            },
+            {
+              "depth": 2,
+              "value": "整个流程",
+              "heading": "整个流程"
+            },
+            {
+              "depth": 3,
+              "value": "高频问题?",
+              "heading": "高频问题"
+            },
+            {
+              "depth": 4,
+              "value": "极简 hooks 实现参考",
+              "heading": "极简-hooks-实现参考"
+            },
+            {
+              "depth": 2,
+              "value": "总结",
+              "heading": "总结"
+            }
+          ],
+          "title": "奇怪的 fiber",
+          "group": {
+            "path": "/77",
+            "title": "77"
+          }
+        },
+        "title": "奇怪的 fiber - XTT"
+      },
+      {
+        "path": "/77/文件上传",
+        "component": require('/Users/wangshun/Desktop/learn/src/77/文件上传.md').default,
+        "exact": true,
+        "meta": {
+          "filePath": "src/77/文件上传.md",
+          "updatedTime": 1709318976735,
+          "slugs": [],
+          "group": {
+            "path": "/77",
+            "title": "77"
+          },
+          "title": "文件上传"
+        },
+        "title": "文件上传 - XTT"
       },
       {
         "path": "/go/container",
@@ -392,7 +1042,7 @@ export function getRoutes() {
         "exact": true,
         "meta": {
           "filePath": "src/TypeScript/workStudy.md",
-          "updatedTime": 1700547603268,
+          "updatedTime": 1708927800000,
           "slugs": [],
           "group": {
             "path": "/type-script",
@@ -696,7 +1346,7 @@ export function getRoutes() {
         "path": "/77",
         "meta": {},
         "exact": true,
-        "redirect": "/77/autowire"
+        "redirect": "/77/2022.4"
       },
       {
         "path": "/type-script",
